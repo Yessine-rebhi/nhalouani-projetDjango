@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%block body%}
+<div class="row ">
+{%for forni in list%}
+<div class="col-md-3">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{forni.nom}}</h5>
+    <p class="card-text">{{forni.email}}</p>
+     <p class="card-text">{{forni.adresse}}</p>
+    <p></p>
+    <a href="{%url 'forniprod' forni.id%}" class="btn btn-success">{{forni.telephone}}</a>
+  </div>
+</div>
+</div>
+{%endfor%}
+</div>
+{%endblock%}
